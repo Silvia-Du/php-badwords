@@ -1,6 +1,13 @@
 <?php
 
-$text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.'
+$text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur.';
+
+$textLenght = strlen($text);
+$textNoSpace = str_replace(' ', '', $text);
+
+$badWord = $_GET['badW'];
+
+echo $badWord;
 
 ?>
 
@@ -16,7 +23,12 @@ $text= 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, aspernatur
 </head>
 <body>
 
-<p></p>
+<h1>Il testo che segue è molto importante</h1>
+
+<p><?php echo $text ?></p>
+<p>La sua lunghezza (compresi gli spazi) è di:<?php echo $textLenght.' ' ?>lettere</p>
+<p>La sua lunghezza (compresi gli spazi) è di:<?php echo strlen($text).' ' ?>lettere</p>
+<p>La sua lunghezza senza spazi é di: <?php echo strlen($textNoSpace).' '?>lettere</p>
   
 </body>
 </html>
