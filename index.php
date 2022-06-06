@@ -9,6 +9,10 @@ $badWord = $_GET['badW'];
 
 echo $badWord;
 
+$correctText = str_replace('Lorem', '***', $text);
+$badWPosition = strpos($text, 'Lorem');
+
+
 ?>
 
 
@@ -26,9 +30,17 @@ echo $badWord;
 <h1>Il testo che segue è molto importante</h1>
 
 <p><?php echo $text ?></p>
-<p>La sua lunghezza (compresi gli spazi) è di:<?php echo $textLenght.' ' ?>lettere</p>
-<p>La sua lunghezza (compresi gli spazi) è di:<?php echo strlen($text).' ' ?>lettere</p>
-<p>La sua lunghezza senza spazi é di: <?php echo strlen($textNoSpace).' '?>lettere</p>
+<p>La sua lunghezza (compresi gli spazi) è di:<?php echo $textLenght.' ' ?>caratteri</p>
+<p>La sua lunghezza (compresi gli spazi) è di:<?php echo strlen($text).' ' ?>caratteri</p>
+<p>La sua lunghezza senza spazi é di: <?php echo strlen($textNoSpace).' '?>caratteri</p>
+
+<h2>In questo testo è stata tolta la bad-word: Lorem</h2>
+
+<p><?php echo $correctText ?></p>
+
+<p>E questa è la sua nuova lunghezza: <?php echo strlen($correctText). ' ' ?>caratteri</p>
+
+
   
 </body>
 </html>
