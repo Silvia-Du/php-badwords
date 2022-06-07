@@ -7,8 +7,6 @@ $textNoSpace = str_replace(' ', '', $text);
 
 $badWord = $_GET['badW'];
 
-echo $badWord;
-
 $correctText = str_replace('Lorem', '***', $text);
 $badWPosition = strpos($text, 'Lorem');
 
